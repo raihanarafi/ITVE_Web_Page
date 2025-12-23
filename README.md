@@ -1,6 +1,7 @@
 # ITVE Landing Page
 
-**Website Link:** https://itve-web-page.vercel.app/
+**Live Demo:** https://itve-web-page.vercel.app/
+**GitHub Repository:** https://github.com/raihanarafi/ITVE_Web_Page
 
 ## 1. Project Overview
 This project is a professional, high-performance landing page for **ITVE** (Institute of Technical and Vocational Excellence). It is a dynamic web application built with **React** that displays information and educational offerings in a clean, organized gallery format. 
