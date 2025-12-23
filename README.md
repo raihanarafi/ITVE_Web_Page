@@ -15,6 +15,7 @@ The main goal of this application is to provide a seamless user experience for b
 * **Tailwind CSS:** For professional, responsive styling.
 * **JavaScript (ES6+):** For state-driven logic and interactivity.
 * **Vercel:** For automated deployment and hosting.
+* **Utility-First Styling:** By using Tailwind CSS, I ensured that the styling is consistent across all components. This also made the website much faster to load because Tailwind removes all unused CSS before the site goes live.
 
 ## 3. How to Run Locally
 To get this project running on your local machine, follow these steps:
