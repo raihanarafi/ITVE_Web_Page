@@ -20,6 +20,9 @@ The main goal of this application is to provide a seamless user experience for b
 ## 3. How to Run Locally
 To get this project running on your local machine, follow these steps:
 
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/raihanarafi/ITVE_Web_Page
@@ -27,3 +30,13 @@ To get this project running on your local machine, follow these steps:
 2. **Navigate to the project folder:**
    ```bash
    cd Your-Project-Name
+
+3. **Install the dependencies: This command downloads all the necessary libraries (like React and Tailwind) listed in the package.json file.**
+   ```bash
+   npm install
+
+4. **Start the development server: This will launch the website on your local machine.**
+   ```bash
+   npm run dev
+
+5. **View the site: Once the terminal says the server is running, open your browser and go to: http://localhost:5173 (or the link provided in your terminal).**
