@@ -21,6 +21,8 @@ To get this project running on your local machine, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/raihanarafi/ITVE_Web_Page]
+   git clone https://github.com/raihanarafi/ITVE_Web_Page
 
 2. **Navigate to the project folder:**
+   ```bash
+   cd Your-Project-Name
