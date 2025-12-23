@@ -161,12 +161,12 @@ export default function Home({ setView }) {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <img src="/src/images/lab1.jpg" alt="IT Lab" className="h-64 w-full rounded-2xl object-cover shadow-2xl" />
-                <img src="/src/images/E-library.jpg" alt="Library" className="h-40 w-full rounded-2xl object-cover shadow-xl" />
+                <img src="/assets/images/lab1.jpg" alt="IT Lab" className="h-64 w-full rounded-2xl object-cover shadow-2xl" />
+                <img src="/assets/images/E-library.jpg" alt="Library" className="h-40 w-full rounded-2xl object-cover shadow-xl" />
               </div>
               <div className="space-y-4 pt-8">
-                <img src="/src/images/workshop1.webp" alt="Vocational Workshop" className="h-40 w-full rounded-2xl object-cover shadow-xl" />
-                <img src="/src/images/campus.jpg" alt="Campus" className="h-64 w-full rounded-2xl object-cover shadow-2xl" />
+                <img src="/assets/images/workshop1.webp" alt="Vocational Workshop" className="h-40 w-full rounded-2xl object-cover shadow-xl" />
+                <img src="/assets/images/campus.jpg" alt="Campus" className="h-64 w-full rounded-2xl object-cover shadow-2xl" />
               </div>
             </div>
           </div>

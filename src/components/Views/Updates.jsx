@@ -27,7 +27,7 @@ export default function Updates() {
           {/* Industry Event */}
           <div className="md:col-span-8 group relative overflow-hidden rounded-3xl bg-slate-950 text-white min-h-[450px] flex flex-col justify-end p-8 md:p-12 shadow-2xl">
             <img 
-              src="/src/images/lab1.jpg" 
+              src="/assets/images/lab1.jpg" 
               className="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-30" 
               alt="Tech Symposium"
             />
