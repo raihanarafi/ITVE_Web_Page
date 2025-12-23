@@ -40,3 +40,21 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
    npm run dev
 
 5. **View the site: Once the terminal says the server is running, open your browser and go to: http://localhost:5173 (or the link provided in your terminal).**
+
+## 4. Explanation of Pagination Approach
+For this project, I implemented a **State-Driven Component Pagination** system. Since this is a single-page landing page, the "pagination" allows the user to switch between major sections (views) without a full page reload.
+
+**How it works in the code:**
+* **Centralized State:** In `App.jsx`, I used React’s `useState` hook to manage a `view` variable (e.g., `const [view, setView] = useState('home')`).
+* **Navigation Logic:** The `PaginationDots` and `Navbar` components receive the `setView` function as a prop. When a user clicks a dot or a link, it triggers this function to update the state.
+* **Conditional Rendering:** Inside the `<main>` tag, the app checks the current `view` and only renders the matching component (for example: `{view === 'courses' && <Courses />}`).
+* **Visual Indicators:** The active dot or link changes color and size based on the current state, providing "where am I?" feedback to the user.
+
+
+
+## 5. Key Design Decisions
+* **Fixed Side Navigation:** I chose to use "Pagination Dots" fixed to the right side of the screen. This ensures that no matter how long the page content is, the user can always navigate to another section instantly.
+* **Tailwind Utility First:** I used **Tailwind CSS** for all styling. This decision was made to keep the CSS bundle small and to ensure that the design is perfectly consistent across different components.
+* **Mobile-First Responsiveness:** The layout was built to be "mobile-first," meaning it is fully optimized for small screens and expands gracefully for tablets and desktops.
+* **Visual Hierarchy:** Important actions, like the "Apply" and "Student Portal" buttons, use high-contrast colors (like blue) to stand out against the clean white background, guiding students toward their goal.
+* **Performance:** I served images from the `public` folder and kept component logic simple to ensure the website loads and transitions between "pages" almost instantly.
