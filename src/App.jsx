@@ -8,7 +8,7 @@ import About from './components/Views/About';
 import Updates from './components/Views/Updates';
 import Achievements from './components/Views/Achievements';
 import Contact from './components/Views/Contact';
-import Portal from './components/Views/LoginPage';
+import Login from './components/Views/LoginPage';
 import PaginationDots from './components/Layout/PaginationDots';
 import SignUpPage from './components/Views/SignUpPage';
 import TermsOfService from './components/Views/TermsOfService';
@@ -37,7 +37,7 @@ function App() {
         {view === 'updates' && <Updates />}
         {view === 'achievements' && <Achievements setView={setView} />}
         {view === 'contact' && <Contact />}
-        {view === 'portal' && <Portal setView={setView} />}
+        {view === 'portal' && <Login setView={setView} />}
         {view === 'signup' && <SignUpPage setView={setView}/>}
         {view === 'terms' && <TermsOfService />}
         {view === 'privacy' && <PrivacyPolicy />}
