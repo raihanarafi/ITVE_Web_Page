@@ -45,14 +45,18 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
 5. **View the site: Once the terminal says the server is running, open your browser and go to: http://localhost:5173 (or the link provided in your terminal).**
 
 ## 4. Explanation of Pagination Approach
-For this project, I implemented a **State-Driven Component Pagination** system. Since this is a single-page landing page, the "pagination" allows the user to switch between major sections (views) without a full page reload.
 
-**How it works in the code:**
-* **Centralized State:** In `App.jsx`, I used React’s `useState` hook to manage a `view` variable (e.g., `const [view, setView] = useState('home')`).
-* **Navigation Logic:** The `PaginationDots` and `Navbar` components receive the `setView` function as a prop. When a user clicks a dot or a link, it triggers this function to update the state.
-* **Conditional Rendering:** Inside the `<main>` tag, the app checks the current `view` and only renders the matching component (for example: `{view === 'courses' && <Courses />}`).
-* **Visual Indicators:** The active dot or link changes color and size based on the current state, providing "where am I?" feedback to the user.
+For this project, I implemented a **Section-Based Pagination** system that is used exclusively for the Home page. Unlike standard pagination that moves between pages, this system helps users navigate between different sections of a single landing page.
 
+### How it works:
+
+* **Home-Page Specific:** The `PaginationDots` component is programmed to only appear when the user is on the "Home" view. If the user moves to the Portal or other pages, the dots are automatically hidden to keep the interface clean.
+
+* **Section Tracking (Intersection Observer):** I used the **Intersection Observer API** to make the dots "smart." As the user scrolls through the Home page, the app detects which section (like About, Facilities, or FAQ) is currently in the middle of the screen. 
+
+* **Automatic Visual Feedback:** When a section becomes active, the corresponding dot automatically fills with color (`bg-blue-600`) and scales up. This gives the user a clear visual indicator of their current location on the page without them having to click anything.
+
+* **Smooth Navigation:** Each dot is linked to a specific **Element ID** on the Home page. When a user clicks a dot, the app uses a "Smooth Scroll" behavior to glide directly to that part of the page.
 
 
 ## 5. Key Design Decisions
