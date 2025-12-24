@@ -11,6 +11,8 @@ import Contact from './components/Views/Contact';
 import Portal from './components/Views/LoginPage';
 import PaginationDots from './components/Layout/PaginationDots';
 import SignUpPage from './components/Views/SignUpPage';
+import TermsOfService from './components/Views/TermsOfService';
+import PrivacyPolicy from './components/Views/PrivacyPolicy';
 
 function App() {
   const [view, setView] = useState('home');
@@ -37,6 +39,8 @@ function App() {
         {view === 'contact' && <Contact />}
         {view === 'portal' && <Portal setView={setView} />}
         {view === 'signup' && <SignUpPage setView={setView}/>}
+        {view === 'terms' && <TermsOfService />}
+        {view === 'privacy' && <PrivacyPolicy />}
       </main>
 
       {view !== 'portal' && view !== 'signup' && (

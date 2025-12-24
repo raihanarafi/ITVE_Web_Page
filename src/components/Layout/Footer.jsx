@@ -87,8 +87,18 @@ export default function Footer({ setView }) {
         <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 space-y-4 md:space-y-0">
           <p>© 2025 ITVE Institute. Skill the Future.</p>
           <div className="flex space-x-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <button 
+                onClick={() => setView('privacy')} 
+                   className="text-slate-400 hover:text-blue-600 transition-colors"
+                       >
+                       PRIVACY POLICY
+            </button>
+            <button 
+                onClick={() => setView('terms')} 
+                   className="text-slate-400 hover:text-blue-600 transition-colors"
+                       >
+                       TERMS OF SERVICE
+            </button>
           </div>
         </div>
       </div>
