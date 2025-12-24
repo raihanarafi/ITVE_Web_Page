@@ -31,13 +31,13 @@ export default function StudentPortal({ setView }) {
           {/* Role Toggles */}
           <div className="flex bg-gray-400/30 p-1 rounded-full mb-10 w-full max-w-xs">
             <button className="flex-1 py-3 px-2 bg-black text-white rounded-full flex flex-col items-center justify-center text-[10px] font-bold">
-              <span className="mb-1">🏛️</span> PARTNERS
+              <span className="mb-1"></span> STUDENTS
             </button>
             <button className="flex-1 py-3 px-2 text-gray-500 flex flex-col items-center justify-center text-[10px] font-bold border-l border-gray-400/50">
-              <span className="mb-1">🏫</span> SCHOOLS
+              <span className="mb-1"></span> EMPLOYEE
             </button>
             <button className="flex-1 py-3 px-2 text-gray-500 flex flex-col items-center justify-center text-[10px] font-bold border-l border-gray-400/50">
-              <span className="mb-1">💰</span> DONORS
+              <span className="mb-1"></span> INSTITUTIONS
             </button>
           </div>
 
