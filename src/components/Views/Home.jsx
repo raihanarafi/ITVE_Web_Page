@@ -3,8 +3,11 @@ import React from 'react';
 export default function Home({ setView }) {
   return (
     <>
-      {/* HERO SECTION */}
-      <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-slate-950 text-white px-6 pt-24">
+    {/* 1. HERO SECTION */}
+      <section 
+        id="hero" 
+        className="relative flex min-h-screen items-center justify-center overflow-hidden bg-slate-950 text-white px-6 pt-24"
+      >
         <div className="absolute top-20 -left-10 w-80 h-80 bg-blue-600 rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-pulse"></div>
         <div className="absolute bottom-10 -right-10 w-80 h-80 bg-slate-800 rounded-full mix-blend-multiply filter blur-[120px] opacity-30 animate-pulse"></div>
 
@@ -39,7 +42,7 @@ export default function Home({ setView }) {
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
+      {/*2. ABOUT SECTION */}
       <section id="about" className="py-24 px-6 bg-white">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
@@ -110,8 +113,8 @@ export default function Home({ setView }) {
         </div>
       </section>
 
-      {/* PATH SECTION */}
-      <section className="py-24 px-6 bg-white overflow-hidden">
+      {/* 3. PATH SECTION */}
+      <section id="path" className="py-24 px-6 bg-white overflow-hidden">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="mb-4 text-xs font-black uppercase tracking-[0.3em] text-blue-600">How to Start</h2>
@@ -139,8 +142,8 @@ export default function Home({ setView }) {
         </div>
       </section>
 
-      {/* ENVIRONMENT SECTION */}
-      <section className="py-24 px-6 bg-slate-50">
+      {/* 4. ENVIRONMENT SECTION */}
+      <section id="environment" className="py-24 px-6 bg-slate-50">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
@@ -173,8 +176,8 @@ export default function Home({ setView }) {
         </div>
       </section>
 
-      {/* FAQ SECTION */}
-      <section className="py-24 px-6 bg-white">
+      {/* 5. FAQ SECTION */}
+      <section id="faq" className="py-24 px-6 bg-white">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="mb-12 text-3xl font-black text-slate-950 uppercase tracking-tighter md:text-4xl">Common Questions</h2>
           <div className="space-y-4 text-left">
