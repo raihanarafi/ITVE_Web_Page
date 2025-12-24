@@ -17,7 +17,6 @@ const PaginationDots = ({ currentView }) => {
 
     const observerOptions = {
       root: null,
-      // threshold 0.5 means the dot changes when 50% of the section is visible
       threshold: 0.5, 
     };
 
@@ -38,7 +37,7 @@ const PaginationDots = ({ currentView }) => {
     });
 
     return () => observer.disconnect();
-  }, [currentView]); // Re-run if we switch back to home view
+  }, [currentView]); 
 
   if (currentView !== 'home') return null;
 
@@ -66,8 +65,8 @@ const PaginationDots = ({ currentView }) => {
           <div 
             className={`w-2.5 h-2.5 rounded-full border-2 border-blue-600 transition-all duration-300 ${
               activeSection === section.id 
-                ? 'bg-blue-600 scale-125' // Filled and slightly larger when active
-                : 'bg-transparent hover:bg-blue-400' // Hollow when inactive
+                ? 'bg-blue-600 scale-125' 
+                : 'bg-transparent hover:bg-blue-400' 
             }`}
           />
         </button>
