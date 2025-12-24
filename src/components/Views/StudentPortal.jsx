@@ -1,54 +1,85 @@
 import React from 'react';
 
-export default function StudentPortal() {
+export default function StudentPortal({ setView }) {
+  const gridImages = [
+    "path/to/image1.jpg", "path/to/image1.jpg",
+    "path/to/image2.jpg", "path/to/image2.jpg",
+    "path/to/image3.jpg", "path/to/image3.jpg"
+  ];
+
   return (
-    <section className="min-h-screen bg-slate-950 flex items-center justify-center p-6 animate-fadeIn pt-32 pb-20 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div 
-          className="absolute top-0 left-0 w-full h-full" 
-          style={{ 
-            backgroundImage: 'radial-gradient(#2563eb 0.5px, transparent 0.5px)', 
-            backgroundSize: '30px 30px' 
-          }}
-        ></div>
-      </div>
-      
-      <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl relative z-10">
+    <section className="min-h-screen bg-gray-300 flex items-center justify-center p-4 pt-24 pb-12">
+      <div className="w-full max-w-5xl flex flex-col md:flex-row shadow-2xl overflow-hidden rounded-xl bg-white">
         
-        {/* Login */}
-        <div className="bg-slate-900 p-12 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-slate-800 group hover:bg-slate-900/80 transition-all">
-          <div className="mb-8">
-            <div className="h-12 w-12 rounded-full border border-blue-600 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-all">
-              <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
+        {/* Left Side: Image Grid (3 rows, 2 columns) */}
+        <div className="w-full md:w-1/2 grid grid-cols-2 gap-0 bg-white">
+          {gridImages.map((src, index) => (
+            <div key={index} className="aspect-video overflow-hidden border-[0.5px] border-gray-100">
+              <img 
+                src={src} 
+                alt={`Campus ${index}`} 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              />
             </div>
-            <h3 className="text-3xl font-black uppercase tracking-tighter text-white mb-2">Authorized Access</h3>
-            <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">Secure Terminal Login</p>
-          </div>
-          
-          <button className="w-full py-4 bg-transparent border-2 border-slate-700 text-white font-black uppercase tracking-[0.2em] text-[10px] rounded-xl hover:border-blue-600 hover:bg-blue-600 transition-all duration-300">
-            Login
-          </button>
+          ))}
         </div>
 
-        {/* Signup */}
-        <div className="bg-slate-950 p-12 flex flex-col justify-center group relative transition-all">
-          <div className="mb-8">
-            <div className="h-12 w-12 rounded-full border border-slate-700 flex items-center justify-center mb-6 group-hover:border-blue-600 group-hover:bg-blue-600 transition-all">
-              <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-              </svg>
-            </div>
-            <h3 className="text-3xl font-black uppercase tracking-tighter text-white mb-2">New Enrollment</h3>
-            <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">Create Student Identity</p>
+        {/* Right Side: Login Form */}
+        <div className="w-full md:w-1/2 bg-[#E5E7EB] p-8 md:p-12 flex flex-col items-center">
+          <h2 className="text-4xl font-bold text-black mb-8 tracking-tight">EMPLOYEE</h2>
+
+          {/* Role Toggles */}
+          <div className="flex bg-gray-400/30 p-1 rounded-full mb-10 w-full max-w-xs">
+            <button className="flex-1 py-3 px-2 bg-black text-white rounded-full flex flex-col items-center justify-center text-[10px] font-bold">
+              <span className="mb-1">🏛️</span> PARTNERS
+            </button>
+            <button className="flex-1 py-3 px-2 text-gray-500 flex flex-col items-center justify-center text-[10px] font-bold border-l border-gray-400/50">
+              <span className="mb-1">🏫</span> SCHOOLS
+            </button>
+            <button className="flex-1 py-3 px-2 text-gray-500 flex flex-col items-center justify-center text-[10px] font-bold border-l border-gray-400/50">
+              <span className="mb-1">💰</span> DONORS
+            </button>
           </div>
 
-          <button className="w-full py-4 bg-blue-600 text-white font-black uppercase tracking-[0.2em] text-[10px] rounded-xl hover:bg-blue-700 shadow-xl shadow-blue-900/20 transition-all active:scale-95">
-            Register Now
-          </button>
+          {/* Form Fields */}
+          <form className="w-full space-y-6">
+            <div>
+              <label className="block text-xs font-semibold text-gray-600 mb-1 ml-1">Email *</label>
+              <input type="email" className="w-full p-3 rounded-lg border-none shadow-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label className="block text-xs font-semibold text-gray-600 mb-1 ml-1">Password *</label>
+              <input type="password" className="w-full p-3 rounded-lg border-none shadow-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
 
-          <div className="absolute left-0 top-0 w-1 h-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+            <div className="flex items-center justify-between text-xs">
+              <button type="button" className="text-red-700 font-bold hover:underline">Forgot Password?</button>
+              <label className="flex items-center gap-2 text-gray-600 font-medium">
+                <input type="checkbox" className="rounded border-gray-300" /> Remember me
+              </label>
+            </div>
+
+            {/* Sign In Button & Socials */}
+            <div className="flex items-center justify-between pt-4">
+              <button className="bg-black text-white px-8 py-3 rounded-full flex items-center gap-3 font-bold hover:bg-gray-800 transition-all group">
+                Sign In 
+                <span className="bg-gray-700 p-1 rounded-full group-hover:translate-x-1 transition-transform">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                </span>
+              </button>
+              
+              <div className="flex gap-3">
+                <span className="text-gray-500 text-[10px] mt-2 mr-1">or sign up with</span>
+                <button className="p-2 bg-white rounded-full shadow-sm hover:scale-110 transition-transform">🍎</button>
+                <button className="p-2 bg-white rounded-full shadow-sm hover:scale-110 transition-transform">🌐</button>
+                <button className="p-2 bg-white rounded-full shadow-sm hover:scale-110 transition-transform">🔵</button>
+              </div>
+            </div>
+          </form>
+
+          <p className="mt-12 text-sm text-gray-600">
+            Don't have an account? <button onClick={() => setView('signup')} className="font-bold text-gray-800 hover:underline">Sign Up</button>
+          </p>
         </div>
       </div>
     </section>
