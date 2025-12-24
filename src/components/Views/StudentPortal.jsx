@@ -26,7 +26,7 @@ export default function StudentPortal({ setView }) {
 
         {/* Right Side: Login Form */}
         <div className="w-full md:w-1/2 bg-[#E5E7EB] p-8 md:p-12 flex flex-col items-center">
-          <h2 className="text-4xl font-bold text-black mb-8 tracking-tight">EMPLOYEE</h2>
+          <h2 className="text-4xl font-bold text-black mb-8 tracking-tight">STUDENT</h2>
 
           {/* Role Toggles */}
           <div className="flex bg-gray-400/30 p-1 rounded-full mb-10 w-full max-w-xs">
